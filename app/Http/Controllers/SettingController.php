@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SaveFaq;
 use App\Services\FaqService;
 
-class FaqController extends Controller
+class SettingController extends Controller
 {
     private FaqService $faqService;
 
@@ -13,6 +13,48 @@ class FaqController extends Controller
     {
         $this->faqService = new FaqService();
     }
+
+    /**
+     * Maintenance
+     * logo
+     * name
+     * phone
+     * address
+     * email
+     * city
+     * province
+     * zip code
+     * pwa
+     * pwa-icon
+     * pwa-enable
+     * pwa-ThemeColor
+     * pwa-BackgroundColor
+     * pwa-StatusBar
+     * pwa-Display
+     * pwa-Orientation
+     * pwa-direction
+     * sms
+     * sms_providers
+     * sms_key or login name and password just show melipayamak and kevenegar and ippanel
+     * sms create  pattern
+     * newsletter
+     * recaptcha
+     * mnews
+     * custom css js
+     * social link cms
+     * payment pay
+     * sitemap
+     * font
+     * color
+     * sidebar-color
+     * login header
+     * footer menu cms
+     * header menu cms
+     * footer cms copy right
+     * footer cms tag
+     * create permission and role
+     */
+
 
     public function index()
     {

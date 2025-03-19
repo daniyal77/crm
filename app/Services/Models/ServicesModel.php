@@ -70,7 +70,8 @@ abstract class ServicesModel
 
     /**
      * @param array $data
-     * @param       $setModel
+     * @param bool $setModel
+     * @return ServicesModel|mixed
      */
     public function create(array $data, $setModel = false)
     {
@@ -102,7 +103,7 @@ abstract class ServicesModel
 
     /**
      * @param $id
-     *
+     * @param string $attribute
      * @return mixed
      */
     public function delete($id, $attribute = "id")
@@ -199,8 +200,8 @@ abstract class ServicesModel
     }
 
     /**
-     * @param $condition
-     *
+     * @param $key
+     * @param $value
      * @return boolean
      */
     public function exist($key, $value)

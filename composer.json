@@ -11,6 +11,8 @@
     "require": {
         "php": "^8.2",
         "hekmatinasser/verta": "^8.5",
+        "ippanel/php-rest-sdk": "^2.0",
+        "kavenegar/php": "^1.2",
         "laravel/framework": "^12.0",
         "laravel/telescope": "^5.5",
         "laravel/tinker": "^2.10.1",
@@ -36,7 +38,9 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        }, "files": [
+            "app/Helper/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
