@@ -8,7 +8,7 @@ use App\Services\Models\ServiceModel;
 class FaqService extends ServiceModel
 {
 
-    function modelClass()
+    function modelClass(): Faq
     {
         return new Faq();
     }

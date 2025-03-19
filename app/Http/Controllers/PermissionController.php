@@ -6,7 +6,7 @@ use App\Http\Requests\SaveFaq;
 use App\Services\FaqService;
 use App\Services\SettingService;
 
-class SettingController extends Controller
+class PermissionController extends Controller
 {
     private SettingService $settingService;
 
