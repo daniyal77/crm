@@ -38,15 +38,14 @@ class SettingController extends Controller
      * sms_key or login name and password just show melipayamak and kevenegar and ippanel
      * sms create  pattern
      * newsletter
-     * recaptcha
-     * mnews
+     * mnews recaptcha
      * custom css js
      * social link cms
      * payment pay
      * sitemap
-     * font
-     * color
-     * sidebar-color
+     * font  different user
+     * color different user
+     * sidebar-color different user
      * login header
      * footer menu cms
      * header menu cms
