@@ -23,9 +23,21 @@
                                              name="title"  placeholder="عنوان را وارد نمایید">
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">توضیحات</label>
+                                        <label for="intro" class="form-label">توضیحات</label>
+                                        <div class="intro">
+                                            <div  class="ht-150 w-100" id="intro"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label">واحد ها</label>
                                         <div class="editor">
-                                            <div  class="ht-150 w-100" id="notesEditorAdd"></div>
+                                            <select name="" id="">
+                                                <option value="">1</option>
+                                                <option value="">1</option>
+                                                <option value="">1</option>
+                                                <option value="">1</option>
+                                                <option value="">1</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <button class="btn btn-block btn-success">ثبت</button>
