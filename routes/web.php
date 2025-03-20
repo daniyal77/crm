@@ -11,3 +11,4 @@ Route::prefix('faq')->name('faq.')->group(function () {
     Route::get('show/{faq_id}', [FaqController::class, 'show'])->name('show');
 });
 
+
