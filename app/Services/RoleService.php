@@ -5,17 +5,14 @@ namespace App\Services;
 use App\Models\Faq;
 use App\Models\Setting;
 use App\Services\Models\ServiceModel;
+use Spatie\Permission\Models\Role;
 
 class RoleService extends ServiceModel
 {
 
-    function modelClass(): Setting
+    function modelClass(): Role
     {
-        return new Setting();
-    }
-
-    public function createRole(mixed $validated)
-    {
+        return new Role();
     }
 
 

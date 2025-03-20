@@ -39,8 +39,7 @@ class PermissionController extends Controller
     public function savePermission(SavePermissionAndRole $permissionAndRole)
     {
         try {
-            Permission::create(['name'=>'posts.*']);
-            $this->permissionService->createpermission($permissionAndRole->validated());
+            $this->permissionService->create($permissionAndRole->validated());
             return redirect()->back()->with('success', 'عملیات با موفقیت انجام شد!');
         } catch (\Exception $e) {
             saveLogInFile($e);
@@ -50,8 +49,7 @@ class PermissionController extends Controller
     public function saveRole(SavePermissionAndRole $permissionAndRole)
     {
         try {
-            Role::create(['name' => 'reader', 'team_id' => 1]);
-            $this->roleService->createRole($permissionAndRole->validated());
+            $this->roleService->create($permissionAndRole->validated());
             return redirect()->back()->with('success', 'عملیات با موفقیت انجام شد!');
         } catch (\Exception $e) {
             saveLogInFile($e);
