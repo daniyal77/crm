@@ -16,7 +16,16 @@ class FaqController extends Controller
 
     public function index()
     {
-        return view('faq.list');
+        try {
+
+            //use chace
+            $result = $this->faqService->all();
+            return view('faq.list', compact('result'));
+        } catch (\Exception $e) {
+            saveLogInFile($e);
+            return redirect()->back()->with('error', 'مشکلی پیش آمد!');
+        }
+
     }
 
     public function create()
@@ -35,7 +44,7 @@ class FaqController extends Controller
         }
     }
 
-    public function show($faq_id)
+    public function search($faq_id)
     {
         try {
             $faq = $this->faqService->find($faq_id, true);
@@ -49,7 +58,7 @@ class FaqController extends Controller
     public function delete($faq_id)
     {
         try {
-             $this->faqService->delete($faq_id);
+            $this->faqService->delete($faq_id);
             return redirect()->back()->with('success', 'عملیات با موفقیت انجام شد!');
         } catch (\Exception $e) {
             saveLogInFile($e);
