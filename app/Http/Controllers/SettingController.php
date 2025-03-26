@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\SettingService;
+use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
@@ -22,6 +23,7 @@ class SettingController extends Controller
             return redirect()->back()->with('error', 'مشکلی پیش آمد!');
         }
     }
+
     public function pay()
     {
         try {
@@ -31,6 +33,7 @@ class SettingController extends Controller
             return redirect()->back()->with('error', 'مشکلی پیش آمد!');
         }
     }
+
     public function pwa()
     {
         try {
@@ -70,6 +73,7 @@ class SettingController extends Controller
             return redirect()->back()->with('error', 'مشکلی پیش آمد!');
         }
     }
+
     public function sms()
     {
         try {
@@ -93,6 +97,18 @@ class SettingController extends Controller
     public function owner()
     {
         try {
+            return view('setting.user');
+        } catch (\Exception $e) {
+            saveLogInFile($e);
+            return redirect()->back()->with('error', 'مشکلی پیش آمد!');
+        }
+    }
+
+
+    public function store(Request $request)
+    {
+        try {
+            dd($request->all());
             return view('setting.user');
         } catch (\Exception $e) {
             saveLogInFile($e);

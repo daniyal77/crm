@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SaveFaq;
-use App\Services\FaqService;
-use App\Services\SettingService;
-
 class ReportUnitController extends Controller
 {
-
+    public function index()
+    {
+        try {
+            return view('report.performance');
+        } catch (\Exception $e) {
+            saveLogInFile($e);
+            return redirect()->back()->with('error', 'مشکلی پیش آمد!');
+        }
+    }
 }

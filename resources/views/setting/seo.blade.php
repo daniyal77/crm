@@ -26,22 +26,16 @@
                                       <input
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
+
                                 </span>
                             </label>
                             <label class="block">
                                 <span>توضیحات پیش‌فرض متا</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
+                                      <textarea cols="10"
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
+                                      ></textarea>
+
                                 </span>
                             </label>
                             <label class="block">
@@ -50,34 +44,27 @@
                                       <input
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
                                 </span>
                             </label>
-                            <label class="block">
-                                <span>تصویر پیش‌فرض</span>
-                                <span class="relative mt-1.5 flex">
-                                      <input
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
-                                </span>
-                            </label>
+                            <div class=" space-y-5 p-4 mt-4 sm:p-5">
+                                <div class="filepond fp-bg-filled label-icon w-20">
+                                    <p class="mb-2  p-2">تصویر پیش‌فرض</p>
+                                    <input class="cursor-pointer" type="file" x-init="$el._x_filepond = FilePond.create($el,{
+                                    stylePanelAspectRatio: '1:1',
+                                    stylePanelLayout: 'compact circle',
+                                    labelIdle: `<svg xmlns='http://www.w3.org/2000/svg' class='size-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                                      <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12'/>
+                                    </svg>`
+                                  })" accept="image/png, image/jpeg,"/>
+                                </div>
+                            </div>
                             <label class="block">
                                 <span> Google Search Console Verification</span>
                                 <span class="relative mt-1.5 flex">
                                       <input
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
+
                                 </span>
                             </label>
                             <label class="block">
@@ -86,10 +73,6 @@
                                       <input
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
                                 </span>
                             </label>
                         </div>

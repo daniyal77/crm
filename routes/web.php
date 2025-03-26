@@ -26,8 +26,8 @@ Route::prefix('setting')->name('setting.')->group(function () {
     Route::get('social-link', [SettingController::class, 'social'])->name('social.link');
     Route::get('owner', [SettingController::class, 'owner'])->name('owner');
 
-    Route::post('store', [FaqController::class, 'store'])->name('store');
-    Route::post('owner-store', [SettingController::class, 'owner'])->name('owner');
+    Route::post('setting.store', [SettingController::class, 'store'])->name('store');
+    Route::post('owner-store', [SettingController::class, 'owner'])->name('owner.store');
 
     Route::post('permission-store', [PermissionController::class, 'permission'])->name('permission');
     Route::get('permission', [PermissionController::class, 'permission'])->name('permission');

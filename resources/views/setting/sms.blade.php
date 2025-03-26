@@ -1,7 +1,6 @@
-* sms_providers
+
 * sms_key or login name and password just show melipayamak and kevenegar and ippanel
 * sms create  pattern
-
 
 @extends('partial.layout')
 @section('title','تنظیمات sms')
@@ -42,20 +41,7 @@
                     </div>
                     <div class="my-4 h-px  bg-slate-200 dark:bg-navy-500"></div>
                     <div class="col-span-12 lg:col-span-4 mt-4">
-
                         <div class="card space-y-5 p-4 mt-4 sm:p-5">
-                            <label class="block">
-                                <span>عنوان پیش‌فرض سایت</span>
-                                <span class="relative mt-1.5 flex">
-                                      <input
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
-                                      <span
-                                              class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
-                                            <i class="fa-solid fa-regular fa-credit-card"></i>
-                                      </span>
-                                </span>
-                            </label>
                             <label class="block">
                                 <span>سرویس دهنده فعال</span>
                                 <span class="relative mt-1.5 flex">

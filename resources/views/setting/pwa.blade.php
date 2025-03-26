@@ -45,8 +45,8 @@
 
                 <div class="card space-y-5 p-4 mt-4 sm:p-5">
                     <div class="filepond fp-bg-filled label-icon w-20">
-                        <p class="mb-4">لوگو</p>
-                        <input type="file" x-init="$el._x_filepond = FilePond.create($el,{
+                        <p class="mb-2  p-2">لوگو</p>
+                        <input class="cursor-pointer" type="file" x-init="$el._x_filepond = FilePond.create($el,{
                                     stylePanelAspectRatio: '1:1',
                                     stylePanelLayout: 'compact circle',
                                     labelIdle: `<svg xmlns='http://www.w3.org/2000/svg' class='size-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
