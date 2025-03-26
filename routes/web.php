@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\ReportUnitController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,16 @@ Route::prefix('setting')->name('setting.')->group(function () {
 
     Route::post('permission-store', [PermissionController::class, 'permission'])->name('permission');
     Route::get('permission', [PermissionController::class, 'permission'])->name('permission');
+});
+
+Route::prefix('report')->name('report.')->group(function () {
+    Route::get('unit', [ReportUnitController::class, 'index'])->name('index');
+});
+
+Route::prefix('employee')->name('employee.')->group(function () {
+    Route::get('list', [ReportUnitController::class, 'index'])->name('list');
+    Route::get('create', [ReportUnitController::class, 'create'])->name('create');
+    Route::post('store', [ReportUnitController::class, 'store'])->name('store');
 });
 
 
