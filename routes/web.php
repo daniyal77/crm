@@ -18,17 +18,18 @@ Route::prefix('setting')->name('setting.')->group(function () {
     Route::get('general', [SettingController::class, 'general'])->name('general');
     Route::get('pay', [SettingController::class, 'pay'])->name('pay');
     Route::get('pwa', [SettingController::class, 'pwa'])->name('pwa');
-    Route::get('blog', [SettingController::class, 'pwa'])->name('blog');
+    Route::get('blog', [SettingController::class, 'blog'])->name('blog');
     Route::get('custom-asset', [SettingController::class, 'asset'])->name('asset');
-    Route::get('permission', [PermissionController::class, 'permission'])->name('permission');
     Route::get('seo', [SettingController::class, 'seo'])->name('seo');
     Route::get('sms', [SettingController::class, 'sms'])->name('sms');
-    Route::get('social-link', [SettingController::class, 'socialLink'])->name('social.link');
+    Route::get('social-link', [SettingController::class, 'social'])->name('social.link');
     Route::get('owner', [SettingController::class, 'owner'])->name('owner');
 
-
     Route::post('store', [FaqController::class, 'store'])->name('store');
+    Route::post('owner-store', [SettingController::class, 'owner'])->name('owner');
 
+    Route::post('permission-store', [PermissionController::class, 'permission'])->name('permission');
+    Route::get('permission', [PermissionController::class, 'permission'])->name('permission');
 });
 
 

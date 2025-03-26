@@ -20,16 +20,10 @@ class PermissionController extends Controller
         $this->roleService = new RoleService();
     }
 
-    /**
-     * create permission and role
-     */
-
-
-    public function index()
+    public function permission()
     {
         try {
-            $this->settingService->create($saveFaq->validated());
-            return redirect()->back()->with('success', 'عملیات با موفقیت انجام شد!');
+            return view('setting.permission');
         } catch (\Exception $e) {
             saveLogInFile($e);
             return redirect()->back()->with('error', 'مشکلی پیش آمد!');
