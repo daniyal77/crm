@@ -4,6 +4,8 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ReportUnitController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\FileNumberController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -43,4 +45,7 @@ Route::prefix('employee')->name('employee.')->group(function () {
     Route::post('store', [ReportUnitController::class, 'store'])->name('store');
 });
 
+
+//old
+Route::get('filenumber/{filenumber}', [FileNumberController::class, 'show'])->name('show');
 
