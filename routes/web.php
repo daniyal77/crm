@@ -5,6 +5,7 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ReportUnitController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\FileNumberController;
+use App\Http\Controllers\EmployeeController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -40,9 +41,9 @@ Route::prefix('report')->name('report.')->group(function () {
 });
 
 Route::prefix('employee')->name('employee.')->group(function () {
-    Route::get('list', [ReportUnitController::class, 'index'])->name('list');
-    Route::get('create', [ReportUnitController::class, 'create'])->name('create');
-    Route::post('store', [ReportUnitController::class, 'store'])->name('store');
+    Route::get('list', [EmployeeController::class, 'index'])->name('list');
+    Route::get('create', [EmployeeController::class, 'create'])->name('create');
+    Route::post('store', [EmployeeController::class, 'store'])->name('store');
 });
 
 
