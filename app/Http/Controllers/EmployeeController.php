@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function index($file_number)
+    public function index()
     {
-        return redirect()->to("http://192.168.1.3:8096/printfreemessage.aspx?id=" . $file_number);
+        return view('employee.list');
     }
 
     public function create()
     {
+        return view('employee.create');
     }
 
     public function show()
