@@ -6,7 +6,7 @@
 @section('content')
     <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
         <div class="col-span-12 lg:col-span-12">
-            <div class="card">
+            <form method="post" action="{{ route('setting.store') }}" class="card">
                 <div class="flex flex-col items-center space-y-4 border-b border-slate-200 p-4 dark:border-navy-500 sm:flex-row sm:justify-between sm:space-y-0 sm:px-5">
                     <h2 class="text-lg font-medium tracking-wide text-slate-700 dark:text-navy-100">
                         تنظیمات سثو
@@ -23,33 +23,30 @@
                             <label class="block">
                                 <span>عنوان پیش‌فرض سایت</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
-
+                                      <input name="setting['title_website']" type="text"
+                                             class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                 </span>
                             </label>
                             <label class="block">
                                 <span>توضیحات پیش‌فرض متا</span>
                                 <span class="relative mt-1.5 flex">
-                                      <textarea cols="10"
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                      ></textarea>
+                                      <textarea cols="10" name="setting['meta_description']"
+                                                class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"></textarea>
 
                                 </span>
                             </label>
                             <label class="block">
                                 <span> کلمات کلیدی متا </span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
+                                      <input type="text" name="setting['meta_intro']"
+                                             class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                 </span>
                             </label>
                             <div class=" space-y-5 p-4 mt-4 sm:p-5">
                                 <div class="filepond fp-bg-filled label-icon w-20">
                                     <p class="mb-2  p-2">تصویر پیش‌فرض</p>
-                                    <input class="cursor-pointer" type="file" x-init="$el._x_filepond = FilePond.create($el,{
+                                    <input class="cursor-pointer" type="file" name="setting['image_seo_default']"
+                                           x-init="$el._x_filepond = FilePond.create($el,{
                                     stylePanelAspectRatio: '1:1',
                                     stylePanelLayout: 'compact circle',
                                     labelIdle: `<svg xmlns='http://www.w3.org/2000/svg' class='size-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
@@ -61,24 +58,22 @@
                             <label class="block">
                                 <span> Google Search Console Verification</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
+                                      <input name="setting['google_search_console']" type="text"
+                                             class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
 
                                 </span>
                             </label>
                             <label class="block">
                                 <span> Bing Webmaster Tools</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
-                                              class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                              type="text">
+                                      <input name="setting['bing_webmaster']" type="text"
+                                             class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                 </span>
                             </label>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 @stop

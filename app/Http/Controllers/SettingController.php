@@ -108,8 +108,8 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         try {
-            dd($request->all());
-            return view('setting.user');
+          $this->settingService->store($request->all(),userService());
+            return redirect()->back()->with('suc', 'با موفقیت ثبت شد');
         } catch (\Exception $e) {
             saveLogInFile($e);
             return redirect()->back()->with('error', 'مشکلی پیش آمد!');

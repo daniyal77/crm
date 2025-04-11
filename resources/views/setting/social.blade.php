@@ -59,7 +59,7 @@
                             <label class="block">
                                 <span>تصویر پیش‌فرض</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
+                                      <input name=""
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
                                       <span
@@ -71,7 +71,7 @@
                             <label class="block">
                                 <span> Google Search Console Verification</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
+                                      <input name="google_search_console"
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
                                       <span
@@ -83,7 +83,7 @@
                             <label class="block">
                                 <span> Bing Webmaster Tools</span>
                                 <span class="relative mt-1.5 flex">
-                                      <input
+                                      <input name="bing_webmaster"
                                               class="form-input peer w-full rounded-lg  border border-slate-300 bg-transparent px-3 py-2 pr-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                               type="text">
                                       <span
